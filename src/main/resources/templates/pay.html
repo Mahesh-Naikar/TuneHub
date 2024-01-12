@@ -11,15 +11,25 @@
 
 </head>
 <body>
-    <div class="navbar">
-        <a href="logout">Logout</a>
-    </div>
-		<h1>Why premium ?</h1>
-		<h2>Elevate your musical experience with a subscription that unlocks a world of limitless tunes. Dive into a vast library spanning genres and eras, ensuring there's something for every mood. Enjoy ad-free listening, uninterrupted by pesky commercials. Immerse yourself in high-quality, crystal-clear sound that brings your favorite tracks to life. Discover new releases before the crowd and create personalized playlists to match your unique vibe. With offline listening, take your music wherever you go, even when internet access is limited. Support your favorite artists by streaming guilt-free, knowing your subscription contributes directly to their success. Upgrade today and let the music never stop.</h2>
+	<div class="navbar">
+		<a href="logout">Logout</a>
+	</div>
+	<h1>Why premium ?</h1>
+	<h2>Elevate your musical experience with a subscription that
+		unlocks a world of limitless tunes. Dive into a vast library spanning
+		genres and eras, ensuring there's something for every mood. Enjoy
+		ad-free listening, uninterrupted by pesky commercials. Immerse
+		yourself in high-quality, crystal-clear sound that brings your
+		favorite tracks to life. Discover new releases before the crowd and
+		create personalized playlists to match your unique vibe. With offline
+		listening, take your music wherever you go, even when internet access
+		is limited. Support your favorite artists by streaming guilt-free,
+		knowing your subscription contributes directly to their success.
+		Upgrade today and let the music never stop.</h2>
 
-		<form id="payment-form">
-			<button type="submit" class="buy-button">BUY</button>
-		</form>
+	<form id="payment-form">
+		<button type="submit" class="buy-button">BUY</button>
+	</form>
 	<script>
 $(document).ready(function() {
     $(".buy-button").click(function(e) {
@@ -37,10 +47,10 @@ function createOrder() {
         .done(function(order) {
             order = JSON.parse(order);
             var options = {
-                "key": "rzp_test_2X62Nr4fUdbs3d",
+                "key": "rzp_test_pvGIc9JvXWZTVS",
                 "amount": order.amount_due.toString(),
                 "currency": "INR",
-                "name": "TuneHub",
+                "name": "Tune Hub",
                 "description": "Test Transaction",
                 "order_id": order.id,
                 "handler": function (response) {
@@ -70,9 +80,11 @@ function verifyPayment(orderId, paymentId, signature) {
      $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
          .done(function(isValid) {
              if (isValid) {
-                 console.log("Payment successful");
+                 alert("Payment successful");
+                 window.location.href = 'payment-success';
              } else {
-                 console.log("Payment failed");
+                 alert("Payment failed");
+                 window.location.href = 'payment-failure';
              }
          })
          .fail(function(error) {
