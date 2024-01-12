@@ -1,0 +1,52 @@
+@charset "ISO-8859-1";
+
+body {
+	background: linear-gradient(to right, #ff5f6d, #ffc371);
+	background-image:url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+	margin-top: 35px;
+	display: flex;
+	align-items: center;
+	border-collapse: collapse;
+	justify-content: center;
+	height: 160vh;
+}
+
+table {
+	box-shadow: 0 0 10px black;
+	border-collapse: collapse;
+	width: 60%;
+}
+
+th {
+	color: white;
+	margin-bottom: 20px;
+	font-size: 25px;
+	text-shadow: 0 0 10px black;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	border-top: 1px solid #ff9f6d;
+	border-bottom: 1px solid #ff9f6d;
+	border-right: none;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 50px;
+	text-align: center;
+	color: white;
+	font-size: 40px;
+	color: white;
+	text-shadow: 0 0 10px black;
+}
+
+tr:hover {
+	background-color: rgb(219, 228, 242);
+}

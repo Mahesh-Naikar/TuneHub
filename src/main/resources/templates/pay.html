@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Payment</title>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/pay.css}">
+
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="logout">Logout</a>
+    </div>
+		<h1>Why premium ?</h1>
+		<h2>Elevate your musical experience with a subscription that unlocks a world of limitless tunes. Dive into a vast library spanning genres and eras, ensuring there's something for every mood. Enjoy ad-free listening, uninterrupted by pesky commercials. Immerse yourself in high-quality, crystal-clear sound that brings your favorite tracks to life. Discover new releases before the crowd and create personalized playlists to match your unique vibe. With offline listening, take your music wherever you go, even when internet access is limited. Support your favorite artists by streaming guilt-free, knowing your subscription contributes directly to their success. Upgrade today and let the music never stop.</h2>
+
+		<form id="payment-form">
+			<button type="submit" class="buy-button">BUY</button>
+		</form>
+	<script>
+$(document).ready(function() {
+    $(".buy-button").click(function(e) {
+        e.preventDefault();
+        var form = $(this).closest('form');
+        
+        
+        createOrder();
+    });
+});
+
+function createOrder() {
+	
+    $.post("/createOrder")
+        .done(function(order) {
+            order = JSON.parse(order);
+            var options = {
+                "key": "rzp_test_2X62Nr4fUdbs3d",
+                "amount": order.amount_due.toString(),
+                "currency": "INR",
+                "name": "TuneHub",
+                "description": "Test Transaction",
+                "order_id": order.id,
+                "handler": function (response) {
+                    verifyPayment(response.razorpay_order_id, response.razorpay_payment_id, response.razorpay_signature);
+                },
+                "prefill": {
+                    "name": "Your Name",
+                    "email": "test@example.com",
+                    "contact": "9999999999"
+                },
+                "notes": {
+                    "address": "Your Address"
+                },
+                "theme": {
+                    "color": "#F37254"
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        })
+        .fail(function(error) {
+            console.error("Error:", error);
+        });
+}
+
+function verifyPayment(orderId, paymentId, signature) {
+     $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
+         .done(function(isValid) {
+             if (isValid) {
+                 console.log("Payment successful");
+             } else {
+                 console.log("Payment failed");
+             }
+         })
+         .fail(function(error) {
+             console.error("Error:", error);
+         });
+}
+</script>
+</body>
+</html>

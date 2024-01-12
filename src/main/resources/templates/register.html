@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Register</title>
+    <link rel="stylesheet" th:href="@{/css/register.css}">
+</head>
+<body>
+
+ <div class="container"> <!-- Add a class to the container div -->
+  
+    <form action="register" method="post">
+        <h1> Register </h1> 
+    
+        <label>Username :</label>
+        <input type="text" name="username"><br><br>
+
+        <label>User mail :</label>
+        <input type="email" name="email"><br><br>
+
+        <label>Password :</label>
+        <input type="password" name="password"><br><br>
+
+        <label>Gender :</label>
+        <input type="radio" name="gender" value="male"><label>Male</label>
+        <input type="radio" name="gender" value="female"><label>Female</label>
+        <input type="radio" name="gender" value="others"><label>Other</label><br><br>
+
+        <label>Role :</label>
+        <input type="radio" name="role" value="admin"><label>Admin</label>
+        <input type="radio" name="role" value="customer"><label>Customer</label><br><br>
+
+        <label>Address :</label> <!-- Use label instead of p -->
+        <textarea rows="3" cols="36" name="address"></textarea><br><br>
+           
+        <button>Register</button> <!-- Remove the div around the button -->
+        
+    </form>
+</div>
+
+</body>
+</html>
