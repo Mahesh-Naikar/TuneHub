@@ -23,9 +23,6 @@ public class UsersController {
 	@Autowired
 	UsersService userService;
 	
-	@Autowired
-	SongService songService;
-	
 	@PostMapping("/register")
 	public String addUser(@ModelAttribute Users user) {
 		
@@ -54,11 +51,8 @@ public class UsersController {
 			}
 			else{
 				Users user=userService.getUser(email);
-				if(user.isPremium()) {
-					List<Song> songsList=songService.fetchAllSongs();
-					model.addAttribute("songs", songsList);
-					return "displaySong";
-				}
+				boolean userStatus=user.isPremium();
+				model.addAttribute("isPremium", userStatus);
 				return "customerHome";
 			}
 		}

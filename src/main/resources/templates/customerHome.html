@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="www.thymleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Customer Home</title>
 <link rel="stylesheet" th:href="@{/css/customerHome.css}">
 </head>
 <body>
-<div class="navbar">
-    <a href="logout">Logout</a>
+<div th:unless="${isPremium}" class="not-premium">
+  <div class="navbar">
+     <a href="logout">Logout</a>
+  </div>
+  <div class="container1">
+      <div class="customer1">
+         <h1>Customer Home </h1>
+         <a href="pay"><button>Get Premium</button></a>
+       </div>
+  </div>
 </div>
-<div class="container">
-   <div class="customer">
-      <h1>Customer Home </h1>
-      <a href="pay"><button>Subscribe</button></a>
-   </div>
+
+
+<div th:if="${isPremium}" class="premium">  
+   <div class="navbar">
+     <a href="logout">Logout</a>
+   </div> 
+   <div class="container2">
+       <div class="customer2">
+          <h1>Customer Home</h1>
+          <a href="viewSong"><button>View Songs</button></a><br>
+          <a href="viewPlaylist"><button>View Playlist</button></a>
+       </div>
+    </div>
 </div>
 </body>
 </html> 
