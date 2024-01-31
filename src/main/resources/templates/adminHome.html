@@ -6,19 +6,41 @@
 <link rel="stylesheet" th:href="@{/css/adminHome.css}">
 </head>
 <body>
+     <header class="container">
+         <div class="page-header">
+            <div class="logo">
+                <a href="index">TuneHub</a>
+            </div>
+            
+            <ul>
+                <li><a href="adminHome" class="active" >Home</a></li>
+                 <li><a href="logout" > Logout</a></li>
+            </ul>
+        </div>
+    </header>
 
-<div class="navbar">
-    <a href="logout">Logout</a>
-</div>
-<div class="container"> 
+<div class="container1"> 
     <div class="admin">
-       <h1>Admin Home</h1>
-       <a href="newSong"><button>Add a New Song</button></a><br>
-       <a href="viewSong"><button>View Songs</button></a><br>
-       <a href="createPlaylist"><button>Create Playlist</button></a><br>
-       <a href="viewPlaylist"><button>View Playlist</button></a>
+    <h1>🎵 TuneHub Admin's Symphony 🎵</h1>
+    <p>Welcome, Maestro! You're the conductor of TuneHub's vast music collection. Your baton guides the rhythm and harmony of our platform. Let's orchestrate some magic! 🎻</p>
+
+    <h2>📰 Recent Crescendos 📰</h2>
+    <p>Our music library is a living, breathing entity, constantly evolving with new additions. Stay in rhythm with the latest harmonies and melodies that have been woven into our collection. 🎹</p>
+
+    <h2>🌟 Featured Compositions 🌟</h2>
+    <p>Every day, new stars are born on TuneHub. Discover the latest chart-toppers and crowd favorites that have been added to our platform. Who knows, you might find your next earworm here! 🎷</p>
+
+    <div class="button-group">
+        <p>Ready to dive into the music? Use these buttons to navigate through TuneHub:</p>
+        <a href="viewSong"><button>👀 View Songs</button></a>
+        <a href="viewPlaylist"><button>📜 View Playlists</button></a>
+        <a href="newSong"><button>➕ Add a Song</button></a>
+        <a href="createPlaylist"><button>🎧 Create a Playlist</button></a>
     </div>
+    <p>Remember, every note you add brings us closer to the perfect symphony. Let's make some music! 🎶</p>
 </div>
 
+
+</div>
 </body>
 </html>

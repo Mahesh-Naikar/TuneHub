@@ -1,16 +1,111 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="ww.thymleaf.org">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Tunehüb</title>
-    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{./css/index.css}">
+    <title>TuneHub</title>
+
 </head>
+
 <body>
-    <div class="container">
-        <h1>🎵Tunehüb🎧</h1>
-        <h3>You are what you listen to🎶</h3>
-        <a href="/register"><button>Register</button></a><br>
-        <a href="/login"><button>Login</button></a>
-    </div>
+    <header class="container">
+         <div class="page-header">
+            <div class="logo">
+                <a href="#">TuneHub</a>
+            </div>
+            
+            <ul>
+                <li><a href="#" class="active" >Home</a></li>
+                <li><a href="#overview" >Overview</a></li>
+                <li><a href="#blog" >Blog</a></li>
+                <li><a href="#contact" >Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="container">
+    
+        <div class="main">
+        
+            <div class="detail">
+             <p class="discount">Hello, There</p>
+                <h1>Welcome to Your Music Haven</h1>
+                <a href="login"><button type="button" class="genral-btn">LOGIN</button></a>
+                <a href="register"><button type="button" class="genral-btn">REGISTER</button></a>
+            </div>
+            
+            <div class="images">
+                <!-- You can replace the image with an album cover or any relevant image -->
+                <img src="https://indiaeducationdiary.in/wp-content/uploads/2017/11/image008.jpg" alt="Music Album" class="img-w">
+            </div>
+            
+            
+            <div class="overview" id="overview">
+            
+            <h2>Overview</h2>
+                
+                 <p>Welcome to the heart of musical bliss at TuneHub! Our music player is not just a player; it's a gateway to a world where melody and rhythm blend seamlessly to create an unforgettable listening experience. Whether you're a casual listener or a dedicated audiophile, our music player is designed to cater to your musical preferences with finesse.</p>
+
+                 <p>Immerse yourself in the sleek and intuitive design that defines our music player. Navigating through your music library has never been this seamless. The interface is not just aesthetically pleasing but also incredibly user-friendly, allowing you to effortlessly explore and enjoy your favorite tunes.</p>
+
+                 <p>One of the standout features of our music player is its versatility. Play your cherished tracks anytime, anywhere – be it at home, in the office, or on the move. Our player ensures a consistent and high-quality audio experience across all your devices, so your music is always within reach.</p>
+
+                <p>Creating the perfect soundtrack for your life is made easy with our customizable playlists. Tailor your musical journey to suit your mood, activity, or the moment. Whether you're in the mood for energizing beats or soothing melodies, our music player empowers you to curate playlists that resonate with your emotions.</p>
+
+                <p>Step into the world of TuneHub Music Player, where every note and every beat is a celebration of your love for music. Elevate your listening experience and let the music take you on a journey of joy and emotion.</p>
+            </div>
+            
+            
+            <div class="blog" id="blog">
+            
+               <h2>Blog</h2>
+            
+               <h3>Exploring Musical Horizons with TuneHub Music Player</h3>
+               <p>Music has an extraordinary power to transcend boundaries, evoke emotions, and create memories. At TuneHub, we believe that the journey of musical exploration should be as enjoyable as the music itself. That's why we're excited to introduce you to our state-of-the-art music player, a platform designed to elevate your listening experience to new heights.</p>
+
+               <h3>A Symphony of Features</h3>
+               <p>Our music player is more than just a tool for playing tunes; it's a companion on your musical journey. The intuitive interface invites you to delve into a world where every note is a discovery. Whether you're a casual listener or a devoted music enthusiast, our player offers a suite of features tailored to meet your every need.</p>
+
+               <h3>Seamless Listening Anytime, Anywhere</h3>
+               <p>Life is dynamic, and so is your music. With TuneHub Music Player, enjoy your favorite tracks seamlessly across various devices. Whether you're relaxing at home, working in the office, or on the move, our player adapts to your lifestyle, ensuring a consistent and high-quality audio experience.</p>
+
+              <h3>Your Soundtrack, Your Way</h3>
+              <p>Create the soundtrack of your life with our customizable playlists. Tailor your music to match your mood, activity, or the moment. Our player empowers you to curate playlists that resonate with your emotions, making every listening session a personalized and memorable experience.</p>
+
+              <h3>Join the Musical Odyssey</h3>
+              <p>As we embark on this musical odyssey together, we invite you to explore the incredible features of TuneHub Music Player. Whether you're discovering new artists or rediscovering old favorites, our blog will be your guide through the vast landscape of sound. Stay tuned for in-depth reviews, artist spotlights, and tips to make the most of your music player.</p>
+                                 
+            </div>
+        </div>
+    </section>
+    
+     <footer class="container" id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us :</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us On :</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TuneHub. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+
 </body>
+
 </html>

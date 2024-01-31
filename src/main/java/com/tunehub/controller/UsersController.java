@@ -14,53 +14,63 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class UsersController {
-	
+
 	@Autowired
 	UsersService userService;
-	
+
 	@PostMapping("/register")
 	public String addUser(@ModelAttribute Users user) {
-		
-		boolean emailStatus=userService.emailExist(user.getEmail());
-		if(emailStatus==false) {
+
+		boolean emailStatus = userService.emailExist(user.getEmail());
+		if (emailStatus == false) {
 			userService.addUser(user);
 			System.out.println("User added Successfully.");
+		} else {
+			System.out.println("E-mail : '" + user.getEmail() + "' is already exists.");
 		}
-		else {
-			System.out.println("E-mail : '"+user.getEmail()+"' is already exists.");
-		}
-		
+
 		return "home";
-		
+
 	}
-	
+
 	@PostMapping("/validate")
-	public String validateUser(@RequestParam String email,@RequestParam String password,HttpSession session,Model model) {
-		
-		if(userService.validateUser(email, password)==true) {
-			String role=userService.getRole(email);
-			
+	public String validateUser(@RequestParam String email, @RequestParam String password, HttpSession session,
+			Model model) {
+
+		if (userService.validateUser(email, password) == true) {
+			String role = userService.getRole(email);
+
 			session.setAttribute("email", email);
-			if(role.equals("admin")) {
+			if (role.equals("admin")) {
 				return "adminHome";
-			}
-			else{
-				Users user=userService.getUser(email);
-				boolean userStatus=user.isPremium();
+			} else {
+				Users user = userService.getUser(email);
+				boolean userStatus = user.isPremium();
 				model.addAttribute("isPremium", userStatus);
 				return "customerHome";
 			}
-		}
-		else {
+		} else {
 			return "login";
 		}
 	}
-	
+
 	@GetMapping("/logout")
 	public String logut(HttpSession session) {
 		session.invalidate();
 		return "login";
 	}
-	
-	
+
+	@PostMapping("/resetPassword")
+	public String resetPassword(@RequestParam String email, @RequestParam String newPassword, Model model) {
+
+		boolean emailExists = userService.emailExist(email);
+
+		if (emailExists) {
+			Users user = userService.getUser(email);
+			user.setPassword(newPassword);
+			userService.updateUser(user);
+			return "login";
+		}
+		return "resetPassword";
+	}
 }

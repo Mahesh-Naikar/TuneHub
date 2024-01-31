@@ -6,31 +6,36 @@
     <link rel="stylesheet" th:href="@{/css/displayPlayList.css}">
 </head>
 <body>
+<header class="container">
+         <div class="page-header">
+            <div class="logo">
+                <a href="index">TuneHub</a>
+            </div>
+            
+            <ul>
+                <li><a href="adminHome" class="active" >Home</a></li>
+                 <li><a href="logout" > Logout</a></li>
+            </ul>
+        </div>
+</header>
 
-    <h1>Playlists 🎼</h1>
+    <h1>🎼 TuneHub's Playlist Universe 🎼</h1>
     <div class="container">
-       <table>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Songs</th>
-            </tr>
-            <tr th:each="playlist : ${allplaylist}">
-                <td th:text="${playlist.id}"></td>
-                <td th:text="${playlist.name}"></td>
-                <td>
-                    <ul>
-                      <li th:each="song :${playlist.songs}">
-                        <label>▪️</label>
-                        <label th:text="${song.name}"></label><br>
-                        <audio controls>
-                            <source th:src="${song.link}" type="audio/mpeg">
-                        </audio>
-                     </li>
-                    </ul>
-                </td>
-            </tr>
-       </table>
+        <div class="playlist-list" th:each="playlist : ${allplaylist}">
+            <div class="playlist-card">
+                <h2 class="playlist-name" th:text="${playlist.name}"></h2>
+                <ul class="song-list">
+                    <li class="song-item" th:each="song :${playlist.songs}">
+                        <p class="song-name" th:text="${song.name}"></p>
+                        <div class="song-player">
+                            <audio controls>
+                                <source th:src="${song.link}" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 </body>

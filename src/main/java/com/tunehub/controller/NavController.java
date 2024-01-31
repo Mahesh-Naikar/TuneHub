@@ -19,4 +19,19 @@ public class NavController {
     public String newSong() {
         return "newSong";
     }
+	@GetMapping("/forgotPassword")
+    public String forgotPassword() {
+        return "resetPassword";
+    }
+	
+	
+	//--------------
+	@GetMapping("/adminHome")
+    public String adminHome() {
+        return "adminHome";
+    }
+	@GetMapping("/index")
+    public String Home() {
+        return "index";
+    }
 }

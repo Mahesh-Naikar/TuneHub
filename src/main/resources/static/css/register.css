@@ -1,10 +1,17 @@
 @charset "ISO-8859-1";
 
 body {
+	/*
 	background: linear-gradient(to right, #ff5f6d, #ffc371);
 	background-image:url(bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    */
+    
+    font-family: 'Outfit', sans-serif;
+    background: hsl(309.07deg 62.32% 27.06%);
+    height: 100vh;
+    color: #000;
 }
 
 .container {
@@ -35,7 +42,7 @@ label {
 }
 
 input, textarea {
-	width: 70%;
+	width: 67%;
 	padding: 10px;
 	border: 1px solid white;
 	border-radius: 5px;
@@ -58,9 +65,21 @@ button {
 	border: 2px solid white;
 	border-radius: 10px;
 	transition: 0.5s;
+	margin-bottom: 10px;
 }
 
 button:hover {
 	color: black;
 	background: white;
+}
+p{
+	margin-left:70px;
+	text-align: center;
+	display: inline;
+}
+a{
+	color: white;
+}
+a:hover {
+	color:blue;
 }
