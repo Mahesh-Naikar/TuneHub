@@ -6,7 +6,19 @@
     <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 <body>
- <div class="container">
+<header class="container">
+         <div class="page-header">
+            <div class="logo">
+                <a href="index">TuneHub</a>
+            </div>
+            
+            <ul>
+                <li><a href="index" class="active" >Home</a></li>
+                 <li><a href="register" > Register</a></li>
+            </ul>
+        </div>
+</header>
+ <div class="container1">
   
     <form action="validate" method="post">
         <h1> Login </h1> 
@@ -20,7 +32,7 @@
         <button>Login</button>
         <p>Dont have an Account - <a href="/register">Register</a> </p>
          <br>
-         <a href="/forgotPassword">Forgot Password?</a>
+        <a id="anc" href="/forgotPassword">Forgot Password?</a>
          
     </form>
 </div>

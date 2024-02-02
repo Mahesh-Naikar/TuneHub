@@ -6,8 +6,19 @@
     <link rel="stylesheet" th:href="@{/css/register.css}">
 </head>
 <body>
-
- <div class="container">
+<header class="container">
+         <div class="page-header">
+            <div class="logo">
+                <a href="index">TuneHub</a>
+            </div>
+            
+            <ul>
+                <li><a href="index" class="active" >Home</a></li>
+                 <li><a href="login" > Login</a></li>
+            </ul>
+        </div>
+</header>
+ <div class="container1">
   
     <form action="register" method="post">
         <h1> Register </h1> 
@@ -35,8 +46,7 @@
            
         <button>Register</button>
         
-        <p>Already have an Account - </p>
-         <a href="/login">Login</a>
+        <p>Already have an Account - <a href="/login">Login</a> </p>
         
     </form>
 </div>

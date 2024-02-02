@@ -1,107 +1,90 @@
-@charset "ISO-8859-1";
+/* customerHome.css */
 
 body {
-	background: linear-gradient(to right, #ff5f6d, #ffc371);
-	background-image:url(bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 70%;
+    background-color: #717171;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 10rem;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.active {
+    font-weight: bold;
 }
 
 .container1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60vh;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.customer1 {
-	width: 300px;
-	border-radius: 10px;
-	padding: 20px;
-	box-shadow: 0 0 10px black;
-
+.premium, .not-premium {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container1 h1 {
-	margin-top: 0px;
-	text-align: center;
-	color: white;
-	font-size: 40px;
-	color: white;
-	text-shadow: 0 0 10px black;
-}
-
-a {
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	margin-bottom: 10px;
-	color: white;
-	font-weight: bold;
+.button-group {
+    margin-top: 20px;
 }
 
 button {
-	width: 100%;
-	padding: 15px;
-	border: none;
-	background: transparent;
-	color: white;
-	font-size: 18px;
-	font-family: inherit;
-	font-weight: bold;
-	cursor: pointer;
-	border: 2px solid white;
-	border-radius: 10px;
-	transition: 0.5s;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
 }
 
 button:hover {
-	color: black;
-	background-color: white;
-}
-
-.navbar {
-	margin: auto;
-	width: 90%;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 0 0 10px black;
-	padding-top: 8px;
-	padding-right: 8px;
-	padding-left: 8px;
-}
-
-.navbar a {
-	float: right;
-	color: white;
-	text-shadow: 0 0 1px white;
-	padding: 11px;
-	text-decoration: none;
-	font-size: 20px;
-}
-
-.navbar a:hover {
-	background-color: #ddd;
-	color: black;
-	border-radius: 25px;
-}
-.container2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60vh;
-}
-.customer2 {
-	border-radius: 10px;
-	padding: 20px;
-	box-shadow: 0 0 10px black;
-	
-}
-
-.customer2 h1 {
-	margin-top: 0px;
-	text-align: center;
-	color: white;
-	font-size: 40px;
-	text-shadow: 0 0 10px black;
+    background-color: #555;
 }

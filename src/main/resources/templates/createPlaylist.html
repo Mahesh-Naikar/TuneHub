@@ -18,12 +18,12 @@
             </ul>
         </div>
 </header>
-    <div class="container">
+    <div class="container1">
          <form action="addPlaylist">
                <h1>Create Playlist</h1>
                <label>Playlist name:</label><br>
                <input type="text" name="name"/><br><br>
-               <label style="font-size:20px; color:white">Select the songs :</label><br>
+               <label style="font-size:25px; color:black;">Select the songs :</label><br>
                <div class="songs" th:each="song:${songs}">
                    <input type="checkbox" th:name="songs" th:value="${song.id}">
                    <label th:text="${song.name}"></label>

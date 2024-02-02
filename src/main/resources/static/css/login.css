@@ -1,86 +1,155 @@
-@charset "ISO-8859-1";
+/* login.css */
 
 body {
-	/*
-	background: linear-gradient(to right, #ff5f6d, #ffc371);
-    background-image:url(bg.png);
-    background-repeat: no-repeat;
-    background-size: cover; */
-    
-    font-family: 'Outfit', sans-serif;
-    background: hsl(309.07deg 62.32% 27.06%);
-    height: 100vh;
-    color: #000;
-    
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .container {
+	margin-top: -260px;
+	width: 70%;
+	background-color: #717171;
+	color:black;
+	padding: 10px 0;
+	border-radius: 10rem;
+}
+
+.page-header {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	height: 80vh;
+	padding: 0 20px;
+	overflow: hidden;
+}
+
+.logo a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 24px;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	margin-right: 20px;
+}
+
+ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.active {
+	font-weight: bold;
+}
+
+.container1 {
+	width: 350px;
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
 }
 
 form {
-	width: 350px;
+	width: 100%;
+	max-width: 500px;
+	background-color: #fff;
 	padding: 20px;
-	box-shadow: 0 0 10px ;
-	border-radius: 10px;}
+	border-radius: 8px;
+	box-shadow: 0 0 5px black;
+}
 
 h1 {
-	margin-top: 0px;
 	text-align: center;
-	color: white;
-	font-size: 40px;
-	color: white;
-	text-shadow: 0 0 10px black;
 }
 
 label {
+	margin-bottom: 5px;
+}
+input, textarea {
+	width: 67%;
+	padding: 8px;
 	margin-bottom: 10px;
-	font-weight: bold;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
-input {
-	width: 67%;
-	padding: 10px;
+.container1 button {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
 	border: 1px solid #ccc;
-	border-radius: 5px;
+	border-radius: 4px;
+}
+
+.container1 button {
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
 	font-size: 16px;
 }
 
-button {
-	width: 100%;
-	padding: 15px;
-	border: none;
-	background: transparent;
-	color: white;
-	font-size: 18px;
-	font-family: inherit;
-	font-weight: bold;
-	cursor: pointer;
-	border: 2px solid white;
-	border-radius: 10px;
-	transition: 0.5s;
-	margin-bottom: 10px;
+.container1 button:hover {
+	background-color: #555;
 }
 
-button:hover {
-	color: black;
-	background: white;
-}
-p{
-	margin-left:70px;
+p {
+    margin-top:5px;
 	text-align: center;
-	display: inline;
 }
-a{
-	color: white;
+p a{
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
 }
-a:hover {
-	color:blue;
-}
-a[href="/forgotPassword"]{
+
+#anc{
+	margin-top:-30px;
 	display:block;
 	text-align: center;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
 }
+.home {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.home button{
+	width: 100px;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+}
+.home button:hover {
+	background-color: #555;
+}
+

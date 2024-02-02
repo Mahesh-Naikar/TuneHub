@@ -11,25 +11,37 @@
 
 </head>
 <body>
-	<div class="navbar">
-		<a href="logout">Logout</a>
-	</div>
-	<h1>Why premium ?</h1>
-	<h2>Elevate your musical experience with a subscription that
-		unlocks a world of limitless tunes. Dive into a vast library spanning
-		genres and eras, ensuring there's something for every mood. Enjoy
-		ad-free listening, uninterrupted by pesky commercials. Immerse
-		yourself in high-quality, crystal-clear sound that brings your
-		favorite tracks to life. Discover new releases before the crowd and
-		create personalized playlists to match your unique vibe. With offline
-		listening, take your music wherever you go, even when internet access
-		is limited. Support your favorite artists by streaming guilt-free,
-		knowing your subscription contributes directly to their success.
-		Upgrade today and let the music never stop.</h2>
+<header class="container">
+         <div class="page-header">
+            <div class="logo">
+                <a href="index">TuneHub</a>
+            </div>
+            
+            <ul>
+                <li><a href="adminHome" class="active" >Home</a></li>
+                 <li><a href="logout" > Logout</a></li>
+            </ul>
+        </div>
+</header>
+<div class="container1">
+	<h1>Experience the Best with TuneHub Premium</h1>
+	<p>Unlock a world of limitless tunes with a premium subscription to TuneHub. Here's why you should consider upgrading:</p>
+	<ul>
+		<li><strong>Extensive Library:</strong> Dive into a vast library spanning genres and eras, ensuring there's something for every mood.</li>
+		<li><strong>Ad-Free Listening:</strong> Enjoy your favorite tracks uninterrupted by commercials.</li>
+		<li><strong>High-Quality Audio:</strong> Experience music like never before with high-quality, crystal-clear sound that brings your favorite tracks to life.</li>
+		<li><strong>Early Access:</strong> Discover new releases before anyone else and stay ahead of the music trends.</li>
+		<li><strong>Personalized Playlists:</strong> Create playlists that match your unique vibe and mood.</li>
+		<li><strong>Offline Listening:</strong> With offline listening, your music follows you everywhere, even when internet access is limited.</li>
+		<li><strong>Support Artists:</strong> Stream guilt-free, knowing your subscription contributes directly to the success of your favorite artists.</li>
+	</ul>
+	<p>Upgrade today and let the music never stop. Elevate your musical experience with TuneHub Premium.</p>
 
 	<form id="payment-form">
 		<button type="submit" class="buy-button">BUY</button>
 	</form>
+</div>
+
 	<script>
 $(document).ready(function() {
     $(".buy-button").click(function(e) {

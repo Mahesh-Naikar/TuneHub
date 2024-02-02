@@ -2,16 +2,29 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" th:href="@{/css/home.css}">
+<title>Welcome to TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 <body>
-<div class="navbar">
-    <a href="/login">Login</a>
-</div>
+<header class="container">
+    <div class="page-header">
+        <div class="logo">
+            <a href="index">TuneHub</a>
+        </div>
+        
+        <ul>
+            <li><a href="index" class="active" >Home</a></li>
+            <li><a href="login" > Login</a></li>
+        </ul>
+    </div>
+</header>
 
-<div>
-   <h1>You are Successfully Registered.<br> you can now Login and enjoy our services.</h1>
+<div class="home">
+   <h1>Congratulations!</h1>
+   <p>You've successfully registered with TuneHub. A world of music awaits you. Login now and let your musical journey begin.</p>
+   <p>Discover new artists, create your own playlists, and explore the vast universe of music with us. Whether you're looking to relax, find motivation, or just enjoy some good tunes, we've got you covered.</p>
+   <p>Welcome aboard! Let's hit the right note together.</p>
+   <a href="login"><button>Login</button></a>
 </div>
 
 </body>

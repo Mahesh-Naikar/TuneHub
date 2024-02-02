@@ -30,6 +30,10 @@ public class NavController {
     public String adminHome() {
         return "adminHome";
     }
+	@GetMapping("/customerHome")
+    public String customerHome() {
+        return "customerHome";
+    }
 	@GetMapping("/index")
     public String Home() {
         return "index";

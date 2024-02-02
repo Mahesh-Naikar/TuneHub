@@ -1,11 +1,8 @@
 @charset "ISO-8859-1";
 
-:root {
-            --primary-color: #f4ca51;
-            --primary-dark: #1F252E;
-        }
 /*-----------*/
 h1{
+	color:white;
 	text-align: center;
 }
 * {
@@ -13,20 +10,35 @@ h1{
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f5f6f7;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 .header {
   text-align: center;
   text-transform: uppercase;
   padding: 32px;
-  background-color: #0a0a23;
+  background-color:black;
   color: #fff;
   border-bottom: 4px solid #fdb347;
 }
-
 .container {
+	margin-top:10px;
+    width: 70%;
+    background-color: #717171;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 10rem;
+}
+
+
+.container1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -36,9 +48,14 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px 10px;
+  color:black;
 }
 
 .song-card {
+	background-image:url(https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/QIAQ9Rd/white-music-background_njs6jzi3_thumbnail-1080_01.png);
+	background-size: cover; /* or use 'contain' to fit within the container */
+    background-repeat: no-repeat;
+    background-position: center center;
   width: 100%;
   max-width: 350px;
   height: auto;
@@ -46,114 +63,56 @@ body {
   border-radius: 10px;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px black;
 }
-
 .song-card::after {
   content: "";
   width: 350px;
 }
-
-/* Nav */
-
- .container {
-            padding: 0 15rem;
-        }
-        header {
-            background-color: hsl(309.07deg 62.32% 27.06%);
-            position: sticky;
-            top: 0;
-            justify-content:flex-end;
-            z-index: 1;
-            box-shadow: 0 0 5px black;
-            border-radius: 5px;
-            
-        }
-
-        .page-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            animation: leftSideAni 1s ease forwards;
-        }
-
-        .logo a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        ul {
-            display: flex;
-            gap: .6rem;
-            list-style-type: none;
-            background-color: transparent;
-            overflow: hidden;
-        }
-
-        li a {
-            display: inline-block;
-            padding: .3rem 1rem;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.05rem;
-            font-weight: 300;
-            letter-spacing: .7px;
-            border-radius: 36px;
-            line-height: 2;
-            transition: .3s;
-            animation: navani .3s ease forwards;
-            animation-delay: calc(.15s * var(--navAni));
-        }
-
-        li a.active,
-        li a:hover {
-            color: var(--primary-color);
-        }
-
-        #click {
-            display: none;
-        }
-
-        .menu {
-            display: none;
-        }
-
-        .nav-btn {
-            display: block;
-        }
-
-        .nav-btn-mobile {
-            display: none;
-        }
-
-         @keyframes leftSideAni {
-            0% {
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes navani {
-            0% {
-                transform: translateY(100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    overflow: hidden;
 }
-        /* Nav End */
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.active {
+    font-weight: bold;
+}
+
+/*---Audio------*/
+ audio::-webkit-media-controls-panel {
+    background-color: #eaeff0;
+}
+audio::-webkit-media-controls-play-button {
+    color: black; 
+}
+audio::-webkit-media-controls-volume-slider {
+    color: black;
+}
+ 
+
+
