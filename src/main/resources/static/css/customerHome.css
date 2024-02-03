@@ -14,7 +14,7 @@ body {
 
 .container {
     width: 70%;
-    background-color: #717171;
+    background-color: #262626;
     color: #fff;
     padding: 10px 0;
     border-radius: 10rem;
@@ -55,26 +55,58 @@ ul li a {
 }
 
 .container1 {
-    max-width: 800px;
-    width: 100%;
+	color:white;
+    display: flex;
+    width: 92.5%;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: black;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    margin-top: 10px;
 }
 
-.premium, .not-premium {
+.sidebar {
+	color:white;
+    width: 24%;
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.customer1 ,.admin{
+	margin-left:4px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
 }
 
 .button-group {
-    margin-top: 20px;
+    display: flex;
+    gap: 10px;
 }
 
-button {
+.button-group button {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -82,9 +114,11 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    margin-right: 10px;
 }
 
-button:hover {
+.button-group button:hover {
     background-color: #555;
 }
+.sidebar .active{
+	background-color: #8e8e8e;
+} 

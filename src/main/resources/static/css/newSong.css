@@ -13,9 +13,8 @@ body {
 }
 
 .container {
-	margin-top:-90px;
     width: 70%;
-    background-color: #717171;
+    background-color: #262626;
     color: #fff;
     padding: 10px 0;
     border-radius: 10rem;
@@ -56,24 +55,34 @@ ul li a {
 }
 
 .container1 {
-	width:350px;
-	margin-top:15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+	display:flex;
+    width: 92.5%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height:80vh;
+    margin-top: 10px;
 }
-
+h3{
+	
+	text-align: center;
+}
+.admin{
+	margin-left: 350px;
+}
 form {
     width: 100%;
     max-width: 500px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 1px black;
 }
 
 h1 {
+	margin-top:-10px;
     text-align: center;
 }
 
@@ -99,8 +108,36 @@ input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    margin-bottom: -20px;
 }
 
 input[type="submit"]:hover {
     background-color: #555;
+}
+
+/*----Sidebar*/
+.sidebar {
+        width: 13%;
+        background-color: #dfdfdf;
+        padding: 20px;
+        border-radius: 10px;
+    }
+.sidebar a {
+        display: block;
+        padding: 10px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .sidebar a:hover {
+        background-color: #555;
+        color: white;
+    }
+    
+    .sidebar .active{
+	color:black;
+	background-color: white;
 }

@@ -39,4 +39,12 @@ public class SongController {
 		model.addAttribute("songs", songsList);
 		return "displaySong";
 	}
+	
+	@GetMapping("/viewSongC")
+	public String viewSongC(Model model) {
+		List<Song> songsList=service.fetchAllSongs();
+//		System.out.println(songsList);
+		model.addAttribute("songs", songsList);
+		return "displaySongC";
+	}
 }

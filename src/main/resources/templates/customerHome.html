@@ -1,63 +1,69 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-    <meta charset="ISO-8859-1">
-    <title>Customer Home</title>
-    <link rel="stylesheet" th:href="@{/css/customerHome.css}">
+<meta charset="ISO-8859-1">
+<title>Customer Home</title>
+<link rel="stylesheet" th:href="@{/css/customerHome.css}">
 </head>
 <body>
-
-<header class="container">
-    <div class="page-header">
-        <div class="logo">
-            <a href="index">TuneHub</a>
+     <header class="container">
+         <div class="page-header">
+            <div class="logo">
+                <a href="index">TuneHub</a>
+            </div>
+            
+            <ul>
+                <li><a href="index" class="active" >Home</a></li>
+                 <li><a href="logout" > Logout</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="index" class="active">Home</a></li>
-            <li><a href="logout">Logout</a></li>
-        </ul>
-    </div>
-</header>
-
-<div th:if="${isPremium}" class="premium container1">
-    <div class="customer">
-        <h1>🎵 TuneHub Customer's Symphony 🎵</h1>
-    <p>Welcome, Maestro! You're the conductor of your own music collection. Your baton guides the rhythm and harmony of your playlists. Let's orchestrate some magic! 🎻</p>
-
-    <h2>📰 Recent Crescendos 📰</h2>
-    <p>Our music library is a living, breathing entity, constantly evolving with new additions. Stay in rhythm with the latest harmonies and melodies that have been woven into our collection. 🎹</p>
-
-    <h2>🌟 Featured Compositions 🌟</h2>
-    <p>Every day, new stars are born on TuneHub. Discover the latest chart-toppers and crowd favorites that have been added to our platform. Who knows, you might find your next earworm here! 🎷</p>
-
-    <div class="button-group">
-        <p>Ready to dive into the music? Use these buttons to navigate through TuneHub:</p>
-        <a href="viewSong"><button>👀 View Songs</button></a>
-        <a href="viewPlaylist"><button>📜 View Playlists</button></a>
-    </div>
-    <p>Remember, every note you add brings us closer to the perfect symphony. Let's make some music! 🎶</p>
-    </div>
-</div>
-
-<div th:unless="${isPremium}" class="not-premium container1">
+    </header>
+    
+<div th:unless="${isPremium}" class="container1">
+       <div class="sidebar">
+            <h3>Customer Home</h3>
+            <a href="pay">Get Premium</a>
+        </div>
     <div class="customer1">
-        <h1>🎵 TuneHub Customer's Symphony 🎵</h1>
-    <p>Welcome, Maestro! You're the conductor of your own music collection. Your baton guides the rhythm and harmony of your playlists. Let's orchestrate some magic! 🎻</p>
+        <h1>🎵 Welcome to Your TuneHub Adventure 🎵</h1>
+    <p>Welcome, Music Explorer! You're the maestro of your own music journey. Your taste shapes the rhythm and harmony of your playlists. Let's create some musical magic! 🎻</p>
 
-    <h2>📰 Recent Crescendos 📰</h2>
-    <p>Our music library is a living, breathing entity, constantly evolving with new additions. Stay in rhythm with the latest harmonies and melodies that have been woven into our collection. 🎹</p>
+    <h2>📰 Fresh Beats 📰</h2>
+<p>Our music library is a dynamic universe, constantly expanding with new additions. Stay in sync with the latest tunes and rhythms that have been added to our collection. 🎹</p>
 
-    <h2>🌟 Featured Compositions 🌟</h2>
-    <p>Every day, new stars are born on TuneHub. Discover the latest chart-toppers and crowd favorites that have been added to our platform. Who knows, you might find your next earworm here! 🎷</p>
+<h2>🌟 Trending Tracks 🌟</h2>
+<p>Every day, new melodies rise to fame on TuneHub. Discover the latest hits and popular tracks that are making waves on our platform. You might stumble upon your next favorite tune here! 🎷</p>
 
-    <div class="button-group">
-        <p>Ready to dive into the music? Use these buttons to navigate through TuneHub:</p>
-        <a href="pay"><button>Get Premium</button></a>
-    </div>
-    <p>Remember, every note you add brings us closer to the perfect symphony. Let's make some music! 🎶</p>
-    </div>
+<p>Craving for unlimited songs, playlists, and features? Upgrade to our premium membership and enjoy the full symphony of TuneHub. For a limited time, you can get 50% off your first month. Don't miss this chance to amplify your music experience. 🎶</p>
+<div class="button-group">
+    <a href="pay"><button>Unlock Premium</button></a>
+</div>
 </div>
 
+</div>
+
+
+<div th:if="${isPremium}" class="container1"> 
+<div class="sidebar">
+            <h3>Customer Home</h3>
+            <a href="#" class="active">Home</a>
+            <a href="viewSongC">👀 View Songs</a>
+        <a href="viewPlaylistC">📜 View Playlists</a>
+        </div>
+    <div class="admin">
+    <h1>🎵 Welcome to Your Premium TuneHub Experience 🎵</h1>
+    <p>Welcome, Music Maestro! You're the conductor of TuneHub's vast music collection. Your taste shapes the rhythm and harmony of our platform. Let's create some unforgettable melodies! 🎻</p>
+
+   <h2>📰 Fresh Beats and Rhythms 📰</h2>
+<p>Our music library is a dynamic universe, constantly expanding with new additions. Stay in sync with the latest tunes and rhythms that have been added to our collection. 🎹</p>
+
+<h2>🌟 Trending Tracks 🌟</h2>
+<p>Every day, new melodies rise to fame on TuneHub. Discover the latest hits and popular tracks that are making waves on our platform. You might stumble upon your next favorite tune here! 🎷</p>
+    <p>Ready to dive into the rhythm? Use these buttons to navigate through TuneHub:</p>
+    
+<p>As a premium member, you have unlimited access to all the songs, playlists, and features on TuneHub. You can also create your own playlists, share your music with friends, and get personalized recommendations. Thank you for choosing TuneHub as your music partner. Let's keep the music playing! 🎶</p>
+</div>
+</div>
 
 
 </body>

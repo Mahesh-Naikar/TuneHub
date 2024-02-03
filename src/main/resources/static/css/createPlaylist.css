@@ -1,5 +1,5 @@
 @charset "ISO-8859-1";
-
+/* createPlaylist.css */
 input {
 	width: 90%;
 	padding: 10px;
@@ -11,7 +11,7 @@ input {
 input[type=checkbox] {
 	width: 4%;
 }
-/* newSong.css */
+
 
 body {
     font-family: 'Arial', sans-serif;
@@ -26,9 +26,8 @@ body {
 }
 
 .container {
-	margin-top:10px;
     width: 70%;
-    background-color: #717171;
+    background-color: #262626;
     color: #fff;
     padding: 10px 0;
     border-radius: 10rem;
@@ -68,32 +67,48 @@ ul li a {
     font-weight: bold;
 }
 
+
+
 .container1 {
-	width:100%;
-	margin-top:15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+	display:flex;
+    width: 92.5%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    overflow: auto;
+    height: 80vh;
+    height:80vh;
+    margin-top: 10px;
 }
-
+h3{
+	text-align: center;
+}
+.admin{
+	margin-top:0px;
+	margin-left: 350px;
+}
 form {
     width: 100%;
     max-width: 500px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 1px black;
 }
 
 h1 {
+	margin-top:-5px;
+	margin-bottom:10px;
     text-align: center;
 }
 
 input {
     width: 95%;
     padding: 8px;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -115,5 +130,30 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #555;
 }
+/*----Sidebar*/
+.sidebar {
+        width: 13%;
+        background-color: #dfdfdf;
+        padding: 20px;
+        border-radius: 10px;
+    }
+.sidebar a {
+        display: block;
+        padding: 10px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .sidebar a:hover {
+        background-color: #555;
+        color: white;
+    }
 
+.sidebar .active{
+	color:black;
+	background-color: white;
+}
 

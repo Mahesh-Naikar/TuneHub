@@ -3,6 +3,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Create Playlist</title>
+        <link rel="stylesheet" th:href="@{/css/common.css}">
     <link rel="stylesheet" th:href="@{/css/createPlaylist.css}">
 </head>
 <body> 
@@ -19,6 +20,15 @@
         </div>
 </header>
     <div class="container1">
+    <div class="sidebar">
+            <h3>Admin Home</h3>
+            <a href="adminHome">Home</a>
+            <a href="viewSong">👀 View Songs</a>
+        <a href="viewPlaylist">📜 View Playlists</a>
+        <a href="newSong">➕ Add a Song</a>
+        <a href="createPlaylist" class="active">🎧 Create a Playlist</a>
+        </div>
+    <div class="admin">
          <form action="addPlaylist">
                <h1>Create Playlist</h1>
                <label>Playlist name:</label><br>

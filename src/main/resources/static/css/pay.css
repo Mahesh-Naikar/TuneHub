@@ -13,9 +13,10 @@ body {
 }
 
 .container {
-	margin-top:-70px;
+	margin-top:-100px;
+	margin-bottom:-10px;
     width: 70%;
-    background-color: #717171;
+    background-color: #262626;
     color: #fff;
     padding: 10px 0;
     border-radius: 10rem;
@@ -63,6 +64,7 @@ ul li a {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height:65vh;
 }
 
 h1, h2 {
@@ -89,3 +91,6 @@ form {
 .buy-button:hover {
     background-color: #555;
 }
+.sidebar .active{
+	background-color: #8e8e8e;
+} 

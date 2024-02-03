@@ -50,5 +50,12 @@ public class PlaylistController {
 		model.addAttribute("allplaylist", allplaylist);
 		return "displayPlaylist";
 	}
+	
+	@GetMapping("/viewPlaylistC")
+	public String viewPlaylistC(Model model) {
+		List<Playlist> allplaylist=playlistService.fetchAllPlaylist();
+		model.addAttribute("allplaylist", allplaylist);
+		return "displayPlaylistC";
+	}
 
 }

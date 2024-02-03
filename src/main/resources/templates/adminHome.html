@@ -3,6 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin Home</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
 <link rel="stylesheet" th:href="@{/css/adminHome.css}">
 </head>
 <body>
@@ -20,6 +21,14 @@
     </header>
 
 <div class="container1"> 
+<div class="sidebar">
+            <h3>Admin Home</h3>
+            <a href="adminHome" class="active">Home</a>
+            <a href="viewSong">👀 View Songs</a>
+        <a href="viewPlaylist">📜 View Playlists</a>
+        <a href="newSong">➕ Add a Song</a>
+        <a href="createPlaylist">🎧 Create a Playlist</a>
+        </div>
     <div class="admin">
     <h1>🎵 TuneHub Admin's Symphony 🎵</h1>
     <p>Welcome, Maestro! You're the conductor of TuneHub's vast music collection. Your baton guides the rhythm and harmony of our platform. Let's orchestrate some magic! 🎻</p>
@@ -32,10 +41,6 @@
 
     <div class="button-group">
         <p>Ready to dive into the music? Use these buttons to navigate through TuneHub:</p>
-        <a href="viewSong"><button>👀 View Songs</button></a>
-        <a href="viewPlaylist"><button>📜 View Playlists</button></a>
-        <a href="newSong"><button>➕ Add a Song</button></a>
-        <a href="createPlaylist"><button>🎧 Create a Playlist</button></a>
     </div>
     <p>Remember, every note you add brings us closer to the perfect symphony. Let's make some music! 🎶</p>
 </div>

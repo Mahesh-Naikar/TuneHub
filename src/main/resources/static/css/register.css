@@ -4,7 +4,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-image:url(https://img.freepik.com/premium-photo/black-background-wallpaper_764067-179.jpg);
+    background-position:center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,12 +14,13 @@ body {
 }
 
 .container {
-	margin-top: -20px;
+
 	width: 70%;
-	background-color: #717171;
+	background-color: #262626;
 	color: #fff;
 	padding: 10px 0;
 	border-radius: 10rem;
+	margin-bottom: -100px;
 }
 
 .page-header {
@@ -56,7 +58,7 @@ ul li a {
 }
 .container1 {
 	width: 350px;
-	margin-top: 15px;
+	margin-top: 160px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -64,15 +66,17 @@ ul li a {
 }
 
 form {
+	color:white;
 	width: 100%;
 	max-width: 500px;
-	background-color: #fff;
+	background-color:transparent;
 	padding: 20px;
 	border-radius: 8px;
-	box-shadow: 0 0 5px black;
+	box-shadow: 0 0 10px black;
 }
 
 h1 {
+	margin-top:0px;
 	text-align: center;
 }
 label {
@@ -96,7 +100,6 @@ button {
 	width: 100%;
 	padding: 8px;
 	margin-bottom: 10px;
-	border: 1px solid #ccc;
 	border-radius: 4px;
 }
 

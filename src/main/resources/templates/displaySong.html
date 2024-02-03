@@ -18,8 +18,15 @@
             </ul>
         </div>
 </header>
-<section>
-    <h1>🎵 TuneHub's Melodic Universe 🎵</h1>
+<section >
+    <div class="sidebar">
+            <h3>Admin Home</h3>
+            <a href="adminHome">Home</a>
+            <a href="viewSong" class="active">👀 View Songs</a>
+        <a href="viewPlaylist">📜 View Playlists</a>
+        <a href="newSong">➕ Add a Song</a>
+        <a href="createPlaylist">🎧 Create a Playlist</a>
+        </div>
     <div class="container1">
         <div class="song-list" th:each="song : ${songs}">
             <div class="song-card">
