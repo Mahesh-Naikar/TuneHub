@@ -157,3 +157,14 @@ section{
 .sidebar .active{
 	background-color: #8e8e8e;
 } 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #333;
+}
